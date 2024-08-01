@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+          <ion-item>
+            <ion-label position="floating">FullName</ion-label>
+            <ion-input type="text" formControlName="fullName"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input type="text" formControlName="username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Date of birth</ion-label>
+            <ion-datetime type="MM/DD/YYYY" formControlName="birthDate"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Address</ion-label>
+            <ion-input type="tel" formControlName="phoneNumber"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Phone Number</ion-label>
+            <ion-input type="Number" formControlName="Number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Confirm Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <ion-button expand="full" type="submit" [disabled]="!signUpForm.valid">Register</ion-button>
+        </form>
+
+        <div class="login-link">
+          Sudah memiliki akun? <a routerLink="/sign-in">Sign-in</a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

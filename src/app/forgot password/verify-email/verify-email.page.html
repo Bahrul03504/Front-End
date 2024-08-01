@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Verify Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Check your email</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>We sent a reset link to {{ email }}</p>
+      <ion-item>
+        <ion-label position="floating">Enter 5 digit code</ion-label>
+        <ion-input type="number" [(ngModel)]="code"></ion-input>
+      </ion-item>
+      <ion-button expand="full" (click)="verifyCode()">Verify Code</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,17 @@
+ion-footer ion-tab-bar {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  
+  ion-footer ion-tab-button {
+    flex: 1;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  ion-footer ion-tab-button[tab="order"] {
+    color: #3880ff;
+  }

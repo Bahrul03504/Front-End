@@ -1,0 +1,289 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="custom-title">
+      <img src="assets/img/logo.png" alt="Logo" class="logo" />
+      <div class="logo-text">
+        <span class="logo-name">Groceria</span>
+      </div>
+    </ion-title>
+    <div class="welcome-message">
+      <ion-title>Hi,.. <br />What are you looking for today?</ion-title>
+    </div>
+    <ion-searchbar
+      class="custom-searchbar"
+      placeholder="Cari produk"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list-header>
+    <ion-label>Categories</ion-label>
+    <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+  </ion-list-header>
+
+  <div class="card-container">
+    <ion-card>
+      <ion-card-header>
+        <img
+          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+          alt="Mi Goreng Rendang"
+        />
+        <ion-label class="custom-card-title">
+          <ion-router-link routerLink="/categories/Groceries"
+            >Groceries</ion-router-link
+          >
+        </ion-label>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <img
+          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+          alt="Mi Goreng Rendang"
+        />
+        <ion-label class="custom-card-title">
+          <ion-router-link routerLink="/categories/snack"
+            >Snack</ion-router-link
+          >
+        </ion-label>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <img
+          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+          alt="Mi Goreng Rendang"
+        />
+        <ion-label class="custom-card-title">
+          <ion-router-link routerLink="/categories/drink"
+            >Drink</ion-router-link
+          >
+        </ion-label>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <!-- Best Selling Section -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Best Seller</ion-label>
+      <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+    </ion-list-header>
+    <div class="horizontal-scroll">
+      <div class="best-seller-container">
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+            alt="Mi Goreng Rendang"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Goreng Rendang</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
+            alt="Mi Instan Rasa Soto"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Instan Rasa Soto</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+            alt="Mi Goreng Rendang"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Goreng Rendang</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
+            alt="Mi Instan Rasa Soto"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Instan Rasa Soto</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more,
+      nothing less.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Recommended -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Recommended</ion-label>
+      <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+    </ion-list-header>
+    <div class="horizontal-scroll">
+      <div class="best-seller-container">
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+            alt="Mi Goreng Rendang"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Goreng Rendang</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
+            alt="Mi Instan Rasa Soto"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Instan Rasa Soto</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
+            alt="Mi Goreng Rendang"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Goreng Rendang</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img
+            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
+            alt="Mi Instan Rasa Soto"
+          />
+          <ion-card-content>
+            <ion-card-title class="custom-card-titlee"
+              >Mi Instan Rasa Soto</ion-card-title
+            >
+            <p class="small-text">harga: rp xxx.xxx</p>
+            <ionic4-star-rating
+              [(ngModel)]="rating"
+              starIcon="star"
+              activeColor="#488aff"
+              defaultColor="#f4f4f4"
+              size="small"
+            ></ionic4-star-rating>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label
+        ><ion-router-link routerLink="/beranda"
+          >Home</ion-router-link
+        ></ion-label
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="order">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label
+        ><ion-router-link routerLink="/order">order</ion-router-link></ion-label
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="basket">
+      <ion-icon name="cart-outline"></ion-icon>
+      <ion-label
+        ><ion-router-link routerLink="/cart">Cart</ion-router-link></ion-label
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="account">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label
+        ><ion-router-link routerLink="/account"
+          >Account</ion-router-link
+        ></ion-label
+      >
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

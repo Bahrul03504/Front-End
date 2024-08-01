@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="custom-title">
+      <img src="assets/img/logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+        <span class="logo-name">Groceria</span>
+      </div>
+    </ion-title>
+    <ion-searchbar class="custom-searchbar" placeholder="Cari produk"></ion-searchbar>
+    <ion-card-header>
+      <ion-card-title>Delivery To</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Lokasi pengiriman
+    </ion-card-content>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Products Section -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Produk</ion-label>
+      <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/Minyak/minyak_Bimoli.png" alt="Minyak Bimoli 2L"/>
+            <ion-card-content>
+              <ion-card-title>Minyak Bimoli 2L</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/Minyak/minyak_Tropical.png" alt="Minyak Tropical 2L"/>
+            <ion-card-content>
+              <ion-card-title>Minyak Tropical 2L</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <!-- Best Selling Section -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Best Selling</ion-label>
+      <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang"/>
+            <ion-card-content>
+              <ion-card-title>Mi Goreng Rendang</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png" alt="Mi Instan Rasa Soto"/>
+            <ion-card-content>
+              <ion-card-title>Mi Instan Rasa Soto</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <!-- Groceries Section -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Groceries</ion-label>
+      <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
+    </ion-list-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/teh/Sariwangi.png" alt="Teh Sariwangi"/>
+            <ion-card-content>
+              <ion-card-title>Teh Sariwangi</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6">
+          <ion-card>
+            <img src="assets/img/teh/Sosro.png" alt="Teh Sosro"/>
+            <ion-card-content>
+              <ion-card-title>Teh Sosro</ion-card-title>
+              <p>Harga</p>
+              <ion-button expand="block" class="custom-add-button" color="primary" shape="round">
+                + Tambahkan
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="basket">
+      <ion-icon name="basket-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="account">
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>

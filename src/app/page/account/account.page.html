@@ -1,0 +1,88 @@
+<ion-content>
+  <div class="profile-header">
+    <div class="profile-pic" (click)="presentProfilePicActionSheet()">
+      <img src="assets/img/foto profil.png" alt="Logo" class="logo">
+      <ion-icon name="camera" class="camera-icon"></ion-icon>
+    </div>
+    <h2>{{ fullname }}</h2>
+    <p>Mahasiswa</p>
+  </div>
+  
+  <ion-list>
+    <ion-item button (click)="presentNameActionSheet()">
+      <ion-label>Fullname</ion-label>
+      <ion-text class="ion-text-end">{{ fullname }}</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentPasswordActionSheet()">
+      <ion-label>Tetapkan Sandi</ion-label>
+      <ion-text class="ion-text-end">***********</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nonaktifkan ID Sentuh</ion-label>
+      <ion-toggle slot="end" checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Aktifkan Login Cepat</ion-label>
+      <ion-toggle slot="end" checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Setel Kode PIN</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentPhoneActionSheet()">
+      <ion-label>Ubah Seluler</ion-label>
+      <ion-text class="ion-text-end">089*******76</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentEmailActionSheet()">
+      <ion-label>Ganti e-mail</ion-label>
+      <ion-text class="ion-text-end">ah***********&#64;gmail.com</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentGenderActionSheet()">
+      <ion-label>Gender</ion-label>
+      <ion-text class="ion-text-end">{{ gender }}</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentBirthdateActionSheet()">
+      <ion-label>Tanggal lahir</ion-label>
+      <ion-text class="ion-text-end">{{ birthdate }}</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item button (click)="presentSocialMediaActionSheet()">
+      <ion-label>Akun Media Sosial Tertaut</ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Verifikasi Identitas</ion-label>
+      <ion-text class="ion-text-end" color="danger">Belum verifikasi</ion-text>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/beranda">Home</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="order">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/order">order</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="basket">
+      <ion-icon name="cart-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/cart">Cart</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/account">Account</ion-router-link></ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
+
+
+

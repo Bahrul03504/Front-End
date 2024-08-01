@@ -1,0 +1,95 @@
+/* General Content Styling */
+ion-content {
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
+  
+  /* Card Styling */
+  ion-card img {
+    width: 100%; /* Mengambil lebar penuh dari kontainer induknya */
+    height: auto; /* Memastikan rasio aspek tetap terjaga */
+  }
+  
+  /* Footer Styling */
+  ion-footer ion-tab-bar {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+  }
+  
+  ion-footer ion-tab-button {
+    color: #444;
+  }
+  
+  ion-footer ion-tab-button[tab="home"] {
+    color: #3880ff;
+  }
+  
+  /* Custom Toolbar Styling */
+  .custom-toolbar {
+    --background: #0000ff; /* Latar belakang biru */
+    --color: #ffffff; /* Warna teks putih */
+    display: flex;
+    justify-content: space-between; /* Spasi antara elemen */
+    align-items: center;
+    padding: 0 16px; /* Padding untuk jarak */
+  }
+  
+  /* Memastikan elemen-elemen di dalam toolbar mewarisi warna yang benar */
+  .custom-toolbar ion-title,
+  .custom-toolbar ion-icon,
+  .custom-toolbar img,
+  .custom-toolbar span {
+    color: #ffffff !important; /* Warna putih untuk teks dan ikon */
+  }
+  
+  .custom-toolbar img {
+    width: 100px; /* Ukuran logo yang diperbesar */
+    height: auto;
+    margin-right: 8px; /* Spasi antara logo dan teks */
+  }
+  
+  /* Custom Searchbar Styling */
+  ion-searchbar.custom-searchbar {
+    --background: #ffffff !important; /* Latar belakang putih */
+    --color: #000000 !important; /* Warna teks hitam */
+    flex: 1; /* Mengambil ruang yang tersedia */
+    margin-left: 1px; /* Margin untuk jarak */
+  }
+  
+  /* Custom Add Button Styling */
+  .custom-add-button {
+    --background: #3880ff; /* Warna utama */
+    --background-hover: #3171e0; /* Warna saat dihover */
+    --border-radius: 12px; /* Sudut melengkung */
+    --padding-start: 16px; /* Padding awal */
+    --padding-end: 16px; /* Padding akhir */
+    --min-height: 48px; /* Ketinggian minimum */
+    font-weight: bold; /* Teks tebal */
+  }
+  
+  .custom-add-button ion-icon {
+    margin-right: 8px; /* Spasi antara ikon dan teks */
+  }
+  
+  /* Custom Title Logo Styling */
+  .custom-title {
+    display: flex;
+    justify-content: center; /* Pusat secara horizontal */
+    align-items: center; /* Pusat secara vertikal */
+    flex: 1; /* Mengambil ruang yang tersedia */
+    text-align: center;
+  }
+  
+  .custom-title .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+  }
+  
+  .custom-title .logo {
+    width: 200px; /* Ukuran logo yang diperbesar */
+    height: auto;
+  }
+  

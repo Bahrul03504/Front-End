@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Shopping Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button>
+      <ion-label>Pilih Semua</ion-label>
+      <ion-text class="ion-text-end" color="danger">Hapus</ion-text>
+    </ion-item>
+    <ion-item *ngFor="let item of cartItems">
+      <ion-thumbnail slot="start">
+        <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Mi Goreng Rendang</h2>
+        <p>1000.-</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="decreaseQuantity(item)">-</ion-button>
+        <ion-note>{{ item.quantity }}</ion-note>
+        <ion-button (click)="increaseQuantity(item)">+</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-label>Subtotal</ion-label>
+    <ion-note>${{ subtotal }}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Shipping charges</ion-label>
+    <ion-note>${{ shipping }}</ion-note>
+  </ion-item>
+  <ion-item>
+    <ion-label>Total</ion-label>
+    <ion-note>${{ total }}</ion-note>
+  </ion-item>
+  <ion-button expand="full" color="primary" (click)="checkout()">Checkout</ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/beranda">Home</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="order">
+      <ion-icon name="add-circle-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/order">order</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="basket">
+      <ion-icon name="cart-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/cart">Cart</ion-router-link></ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="account">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label><ion-router-link routerLink="/account">Account</ion-router-link></ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
+
+
+
