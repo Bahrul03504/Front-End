@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-drink',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrinkPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  goToMineralWater() {
+    this.router.navigate(['/categories/drink/mineral-water']);
   }
 
+  goToSoda() {
+    this.router.navigate(['/categories/drink/soda']);
+  }
+
+  goToCoffee() {
+    this.router.navigate(['/categories/drink/coffee']);
+  }
+
+  goToTea() {
+    this.router.navigate(['/categories/drink/tea']);
+  }
+
+  goToMilk() {
+    this.router.navigate(['/categories/drink/milk']);
+  }
+
+  goToEnergyDrink() {
+    this.router.navigate(['/categories/drink/energy-drink']);
+  }
 }

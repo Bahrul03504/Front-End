@@ -16,52 +16,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="scroll-content">
   <ion-list-header>
     <ion-label>Categories</ion-label>
     <ion-button fill="clear" slot="end">Tampilkan semua</ion-button>
   </ion-list-header>
 
   <div class="card-container">
-    <ion-card>
+    <ion-card (click)="goToGroceries()">
       <ion-card-header>
-        <img
-          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-          alt="Mi Goreng Rendang"
-        />
-        <ion-label class="custom-card-title">
-          <ion-router-link routerLink="/categories/Groceries"
-            >Groceries</ion-router-link
-          >
-        </ion-label>
+        <ion-img src="assets/img/Groceries/Groceries.png" alt="Mi Goreng Rendang"></ion-img>
+        <ion-card-title class="custom-card-title">Groceries</ion-card-title>
       </ion-card-header>
     </ion-card>
 
-    <ion-card>
+    <ion-card (click)="goToSnack()">
       <ion-card-header>
-        <img
-          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-          alt="Mi Goreng Rendang"
-        />
-        <ion-label class="custom-card-title">
-          <ion-router-link routerLink="/categories/snack"
-            >Snack</ion-router-link
-          >
-        </ion-label>
+        <ion-img src="assets/img/Snack/Chips.png" alt="Mi Goreng Rendang"></ion-img>
+        <ion-card-title class="custom-card-title">Snack</ion-card-title>
       </ion-card-header>
     </ion-card>
 
-    <ion-card>
+    <ion-card (click)="goToDrink()">
       <ion-card-header>
-        <img
-          src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-          alt="Mi Goreng Rendang"
-        />
-        <ion-label class="custom-card-title">
-          <ion-router-link routerLink="/categories/drink"
-            >Drink</ion-router-link
-          >
-        </ion-label>
+        <ion-img src="assets/img/Drink/Drink.png" alt="Mi Goreng Rendang"></ion-img>
+        <ion-card-title class="custom-card-title">Drink</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card (click)="goToEssentialGroceries()">
+      <ion-card-header>
+        <ion-img src="assets/img/Essential Groceries/Essential Groceries.png" alt="Mi Goreng Rendang"></ion-img>
+        <ion-card-title class="custom-card-title">Essential Groceries</ion-card-title>
       </ion-card-header>
     </ion-card>
   </div>
@@ -75,79 +61,32 @@
     <div class="horizontal-scroll">
       <div class="best-seller-container">
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-            alt="Mi Goreng Rendang"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Goreng Rendang</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <title>+Cart</title>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
-            alt="Mi Instan Rasa Soto"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Instan Rasa Soto</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <title>+Cart</title>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-            alt="Mi Goreng Rendang"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Goreng Rendang</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
-          </ion-card-content>
-        </ion-card>
-        <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
-            alt="Mi Instan Rasa Soto"
-          />
-          <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Instan Rasa Soto</ion-card-title
-            >
-            <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
       </div>
@@ -159,11 +98,7 @@
       <ion-card-title>Card Title</ion-card-title>
       <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
     </ion-card-header>
-
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more,
-      nothing less.
-    </ion-card-content>
+    <ion-card-content>Here's a small text description for the card content. Nothing more, nothing less.</ion-card-content>
   </ion-card>
 
   <!-- Recommended -->
@@ -175,81 +110,33 @@
     <div class="horizontal-scroll">
       <div class="best-seller-container">
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-            alt="Mi Goreng Rendang"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Goreng Rendang</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
-            alt="Mi Instan Rasa Soto"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Instan Rasa Soto</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
         <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Goreng Rendang.png"
-            alt="Mi Goreng Rendang"
-          />
+          <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png" alt="Mi Goreng Rendang" />
           <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Goreng Rendang</ion-card-title
-            >
+            <ion-card-title class="custom-card-titlee">Mi Goreng Rendang</ion-card-title>
             <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
+            <ion-button class="button-container" size="default">+ Card</ion-button>
+            <ionic4-star-rating [(ngModel)]="rating" starIcon="star" activeColor="#488aff" defaultColor="#f4f4f4" size="small"></ionic4-star-rating>
           </ion-card-content>
         </ion-card>
-        <ion-card>
-          <img
-            src="assets/img/Mie/indomie/Mi Instan Rasa Soto.png"
-            alt="Mi Instan Rasa Soto"
-          />
-          <ion-card-content>
-            <ion-card-title class="custom-card-titlee"
-              >Mi Instan Rasa Soto</ion-card-title
-            >
-            <p class="small-text">harga: rp xxx.xxx</p>
-            <ionic4-star-rating
-              [(ngModel)]="rating"
-              starIcon="star"
-              activeColor="#488aff"
-              defaultColor="#f4f4f4"
-              size="small"
-            ></ionic4-star-rating>
-          </ion-card-content>
-        </ion-card>
+        <!-- Additional Cards -->
       </div>
     </div>
   </ion-list>

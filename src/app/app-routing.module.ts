@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
+import { AuthGuard } from './guards/auth.guard';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'cart',
+    redirectTo: 'sign-in',
     pathMatch: 'full'
   },
   {
@@ -41,24 +42,34 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    loadChildren: () => import('./page/account/account.module').then(m => m.AccountPageModule)
+    loadChildren: () => import('./page/account/account.module').then(m => m.AccountPageModule),
+    canActivate: [AuthGuard]  // Melindungi rute dengan guard
   },
   {
     path: 'order',
-    loadChildren: () => import('./page/order/order.module').then(m => m.OrderPageModule)
+    loadChildren: () => import('./page/order/order.module').then(m => m.OrderPageModule),
+    canActivate: [AuthGuard]  // Menambahkan guard jika perlu
   },
   {
-    path: 'groceries',
+    path: 'categories/groceries',
     loadChildren: () => import('./page/categories/groceries/groceries.module').then(m => m.GroceriesPageModule)
   },
   {
-    path: 'snack',
+    path: 'categories/snack',
     loadChildren: () => import('./page/categories/snack/snack.module').then(m => m.SnackPageModule)
   },
   {
-    path: 'drink',
+    path: 'categories/drink',
     loadChildren: () => import('./page/categories/drink/drink.module').then(m => m.DrinkPageModule)
   },
+  {
+    path: 'categories/essential-groceries',
+    loadChildren: () => import('./page/categories/essential-groceries/essential-groceries.module').then( m => m.EssentialGroceriesPageModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'beranda',  // Redirect untuk rute yang tidak ditemukan
+  }
 ];
 
 @NgModule({

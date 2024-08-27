@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-snack',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SnackPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  goToBiskuit() {
+    this.router.navigate(['/categories/snack/biskuit']);
   }
 
+  goToChips() {
+    this.router.navigate(['/categories/snack/chips']);
+  }
+
+  goToCokelat() {
+    this.router.navigate(['/categories/snack/cokelat']);
+  }
+
+  goToKacang() {  // Mengubah menjadi camelCase yang lebih umum
+    this.router.navigate(['/categories/snack/kacang']);  // Pastikan rute ini benar
+  }
+
+  goToPermen() {
+    this.router.navigate(['/categories/snack/permen']);
+  }
+
+  goToWafer() {
+    this.router.navigate(['/categories/snack/wafer']);
+  }
 }

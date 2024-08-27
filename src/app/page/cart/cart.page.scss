@@ -1,17 +1,66 @@
-ion-footer ion-tab-bar {
-    background-color: #f8f8f8;
-    border-top: 1px solid #ddd;
-    display: flex;
-    overflow-x: auto;
-    padding: 10px 0;
+ion-item {
+  align-items: flex-start;
+
+  ion-label {
+    padding-left: 10px;
+
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
   }
-  
-  ion-footer ion-tab-button {
-    flex: 1;
-    color: #444;
-    font-size: 14px;
+
+  ion-thumbnail {
+    margin-right: 10px;
   }
-  
-  ion-footer ion-tab-button[tab="basket"] {
-    color: #3880ff;
+
+  ion-chip {
+    margin-top: 5px;
   }
+
+  ion-input {
+    max-width: 50px;
+    text-align: center;
+  }
+}
+
+/* Pastikan gaya ini hanya diterapkan pada ikon trash-outline */
+.red-trash-icon {
+  color: red !important;
+}
+
+.white-trash-icon {
+  color: white !important;
+}
+
+/* Gaya untuk tombol jika ada produk */
+.red-button {
+  background-color: red !important;
+}
+
+ion-footer ion-tab-button[tab="basket"] {
+  color: #3880ff;
+}
+
+.custom-toolbar {
+  --background: #0000ff;
+  --color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* Gaya untuk latar belakang berdasarkan kondisi hasProducts */
+.cart-page {
+  background-color: white;
+}
+
+.cart-page.has-products {
+  background-color: red;
+}

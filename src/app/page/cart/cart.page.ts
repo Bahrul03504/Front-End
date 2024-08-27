@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../../cart.service';
 
-interface CartItem {
-  id: number;
+interface Product {
   name: string;
   price: number;
-  weight: number;
+  image: string;
   quantity: number;
 }
 
@@ -14,43 +14,31 @@ interface CartItem {
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
-  cartItems: CartItem[] = [
-    { id: 1, name: 'Fresh Broccoli', price: 2.22, weight: 1.5, quantity: 5 },
-    { id: 2, name: 'Fresh Broccoli', price: 2.22, weight: 1.5, quantity: 5 }
-  ];
-  subtotal = 0;
-  shipping = 1.60;
-  total = 0;
+  cart: Product[] = [];
+  hasProducts: boolean = false;
+  showSearchbar: boolean = false;
+  searchQuery: string = '';
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.calculateTotal();
+    this.loadCart();
   }
 
-  increaseQuantity(item: CartItem) {
-    item.quantity++;
-    this.calculateTotal();
-  }
-
-  decreaseQuantity(item: CartItem) {
-    if (item.quantity > 0) {
-      item.quantity--;
-      this.calculateTotal();
-    }
+  loadCart() {
+    this.cart = this.cartService.getCart();
+    this.hasProducts = this.cart.length > 0;
+    console.log('Load Cart - hasProducts:', this.hasProducts); // Debugging
   }
 
   clearCart() {
-    this.cartItems.forEach(item => item.quantity = 0);
-    this.calculateTotal();
+    this.cartService.clearCart();
+    this.loadCart(); // Memuat ulang keranjang setelah membersihkan
+    console.log('Clear Cart - hasProducts:', this.hasProducts); // Debugging
   }
 
-  calculateTotal() {
-    this.subtotal = this.cartItems.reduce((acc, item) => acc + item.price * item.weight * item.quantity, 0);
-    this.total = this.subtotal + this.shipping;
-  }
-
-  checkout() {
-    console.log('Checkout');
+  toggleSearchbar() {
+    this.showSearchbar = !this.showSearchbar;
+    console.log('Searchbar Toggled - showSearchbar:', this.showSearchbar); // Debugging
   }
 }

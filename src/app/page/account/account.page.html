@@ -1,12 +1,14 @@
 <ion-content>
-  <div class="profile-header">
-    <div class="profile-pic" (click)="presentProfilePicActionSheet()">
-      <img src="assets/img/foto profil.png" alt="Logo" class="logo">
-      <ion-icon name="camera" class="camera-icon"></ion-icon>
+  <ion-toolbar class="custom-toolbar">
+    <div class="profile-header">
+      <div class="profile-pic" (click)="presentProfilePicActionSheet()">
+        <img src="assets/img/foto profil.png" alt="Logo" class="logo">
+        <ion-icon name="camera" class="camera-icon"></ion-icon>
+      </div>
+      <h2>{{ fullname }}</h2>
+      <p>Mahasiswa</p>
     </div>
-    <h2>{{ fullname }}</h2>
-    <p>Mahasiswa</p>
-  </div>
+  </ion-toolbar>
   
   <ion-list>
     <ion-item button (click)="presentNameActionSheet()">

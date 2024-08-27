@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,13 +10,15 @@ export class SignInPage {
   username!: string;
   password!: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   onSubmit() {
     // Handle sign-in logic here
     console.log('Username:', this.username);
     console.log('Password:', this.password);
-    // Navigate to the home page or another page after successful sign-in
+
+    // After successful sign-in, navigate to the beranda page
+    this.router.navigate(['/beranda']);
   }
 
   signInWithGoogle() {

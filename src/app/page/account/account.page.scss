@@ -1,7 +1,7 @@
 .profile-header {
   text-align: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #0000ff;
 }
 
 .profile-pic {
@@ -49,4 +49,13 @@ ion-footer ion-tab-button {
 
 ion-footer ion-tab-button[tab="account"] {
   color: #3880ff;
+}
+
+.custom-toolbar {
+  --background: #0000ff;
+  --color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
 }

@@ -1,43 +1,54 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Shopping Cart</ion-title>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title>Keranjang Belanja</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleSearchbar()">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        (click)="clearCart()"
+        [ngClass]="{'red-button': hasProducts}">
+        <ion-icon
+          slot="icon-only"
+          name="trash-outline"
+          [ngClass]="{'red-trash-icon': hasProducts}"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" [class.has-products]="hasProducts" class="cart-page">
+  <!-- Header pencarian -->
+  <ion-header collapse="condense" *ngIf="showSearchbar">
+    <ion-toolbar>
+      <ion-title>
+        <ion-searchbar [(ngModel)]="searchQuery" debounce="0"></ion-searchbar>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Header utama -->
+  <ion-header collapse="condense" *ngIf="!showSearchbar">
+    <ion-toolbar>
+      <ion-title size="large">Keranjang Belanja</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-list>
-    <ion-item button>
-      <ion-label>Pilih Semua</ion-label>
-      <ion-text class="ion-text-end" color="danger">Hapus</ion-text>
-    </ion-item>
-    <ion-item *ngFor="let item of cartItems">
+    <ion-item-divider>
+      <ion-label>Keranjang Belanja</ion-label>
+    </ion-item-divider>
+    <ion-item *ngFor="let product of cart">
       <ion-thumbnail slot="start">
-        <img src="assets/img/Mie/indomie/Mi Goreng Rendang.png">
+        <img [src]="product.image" alt="{{ product.name }}">
       </ion-thumbnail>
       <ion-label>
-        <h2>Mi Goreng Rendang</h2>
-        <p>1000.-</p>
+        <h2>{{ product.name }}</h2>
+        <p>Rp {{ product.price | number:'1.0-0' }}</p>
+        <p>Jumlah: {{ product.quantity }}</p>
       </ion-label>
-      <ion-buttons slot="end">
-        <ion-button (click)="decreaseQuantity(item)">-</ion-button>
-        <ion-note>{{ item.quantity }}</ion-note>
-        <ion-button (click)="increaseQuantity(item)">+</ion-button>
-      </ion-buttons>
     </ion-item>
   </ion-list>
-  <ion-item>
-    <ion-label>Subtotal</ion-label>
-    <ion-note>${{ subtotal }}</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-label>Shipping charges</ion-label>
-    <ion-note>${{ shipping }}</ion-note>
-  </ion-item>
-  <ion-item>
-    <ion-label>Total</ion-label>
-    <ion-note>${{ total }}</ion-note>
-  </ion-item>
-  <ion-button expand="full" color="primary" (click)="checkout()">Checkout</ion-button>
 </ion-content>
 
 <ion-footer>
@@ -48,7 +59,7 @@
     </ion-tab-button>
     <ion-tab-button tab="order">
       <ion-icon name="add-circle-outline"></ion-icon>
-      <ion-label><ion-router-link routerLink="/order">order</ion-router-link></ion-label>
+      <ion-label><ion-router-link routerLink="/order">Order</ion-router-link></ion-label>
     </ion-tab-button>
     <ion-tab-button tab="basket">
       <ion-icon name="cart-outline"></ion-icon>
@@ -60,6 +71,3 @@
     </ion-tab-button>
   </ion-tab-bar>
 </ion-footer>
-
-
-

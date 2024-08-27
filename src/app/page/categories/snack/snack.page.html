@@ -1,6 +1,8 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Snack</ion-title>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="../beranda"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +12,100 @@
       <ion-title size="large">Snack</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="card-row">
+    <ion-card class="center-content small-card" (click)="goToBiskuit()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Biskuit.png" alt="Biskuit" class="card-img"/>
+        <ion-label class="custom-card-title">Biskuit</ion-label>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="center-content small-card" (click)="goToChips()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Chips.png" alt="Chips" class="card-img"/>
+        <ion-label class="custom-card-title">Chips</ion-label>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="center-content small-card" (click)="goToCokelat()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Cokelat.png" alt="Cokelat" class="card-img"/>
+        <ion-label class="custom-card-title">Cokelat</ion-label>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div class="card-row">
+    <ion-card class="center-content small-card" (click)="goToKacang()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Kacang-kacangan.png" alt="Kacang-kacangan" class="card-img"/>
+        <ion-label class="custom-card-title">Kacang</ion-label>
+      </ion-card-header>
+    </ion-card>    
+
+    <ion-card class="center-content small-card" (click)="goToPermen()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Permen.png" alt="Permen" class="card-img"/>
+        <ion-label class="custom-card-title">Permen</ion-label>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card class="center-content small-card" (click)="goToWafer()">
+      <ion-card-header>
+        <img src="assets/img/Snack/Wafer.png" alt="Wafer" class="card-img"/>
+        <ion-label class="custom-card-title">Wafer</ion-label>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div class="card-container">
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
 </ion-content>
